@@ -59,8 +59,8 @@ jsp에서 request.getParameter("firstName"(fieldName)) 혹은, (shortcut) ${para
   servlets: 내부적으로는 자바 클래스. 클래스내의 doGet, doPost등의 메소드로 HTML코드를 동적으로 생성.    
   일반적으로, 비지니스 로직에 servlet을, 뷰 생성에 jsp를, 같이 혼합해서 사용. -> mvc.      
   
-  -doGet.     
-  해당 url(@)로 get요청을 보낼떄. 일반적인 코드 steps:    
+  - doGet,doPost.       
+  해당 url(@)로 get(post)요청을 보낼떄. 일반적인 코드 steps:    
   1)respons content type지정, 2)response의 HTML생성을 위한 printwriter선언. 3) printwriter로 HTML 페이지 생성(print).      
 
   - configuration parameters.    
