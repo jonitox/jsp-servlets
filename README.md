@@ -55,4 +55,15 @@ jsp에서 request.getParameter("firstName"(fieldName)) 혹은, (shortcut) ${para
   
   
   # servlets.   
-  - 
+  - jsp와 차이. jsp: 내부적으론 .jsp를 가진 html 형식파일(단, 중간에 동적인 자바코드로 페이지생성)      
+  servlets: 내부적으로는 자바 클래스. 클래스내의 doGet, doPost등의 메소드로 HTML코드를 동적으로 생성.    
+  일반적으로, 비지니스 로직에 servlet을, 뷰 생성에 jsp를, 같이 혼합해서 사용. -> mvc.      
+  
+  -doGet.   
+  해당 url(@)로 get요청을 보낼떄. 일반적인 코드 steps:    
+  1)respons content type지정, 2)response의 HTML생성을 위한 printwriter선언. 3) printwriter로 HTML 페이지 생성(print).      
+
+  - configuration parameters.    
+  servlet은 특정 값들을 hard-coding하지않고 별도의 파일에 name-value로 명시해두어 사용할 수 있음. 해당 파일은 WEB0INF/web.xml로      
+  xml형식의 표준파일에 context param으로 값들을 명시. 그 후 servlet상에선 httpServlet에 포함된 getServletContext()로 ServletContext를 선언해 객체로 저장하고,         
+  (ServletContext.)getInitParameter("변수명"))로 web.xml에 선언되 값들을 가져올수 있다. (ServletContext는 web.xml에 접근해주는 helper class).        
