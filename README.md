@@ -67,3 +67,7 @@ jsp에서 request.getParameter("firstName"(fieldName)) 혹은, (shortcut) ${para
   servlet은 특정 값들을 hard-coding하지않고 별도의 파일에 name-value로 명시해두어 사용할 수 있음. 해당 파일은 WEB0INF/web.xml로      
   xml형식의 표준파일에 context param으로 값들을 명시. 그 후 servlet상에선 httpServlet에 포함된 getServletContext()로 ServletContext를 선언해 객체로 저장하고,         
   (ServletContext.)getInitParameter("변수명"))로 web.xml에 선언되 값들을 가져올수 있다. (ServletContext는 web.xml에 접근해주는 helper class).        
+  
+- init params.   
+  web.xml에서 각 suvlet별 param 지정 가능    
+  
