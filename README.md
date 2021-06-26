@@ -51,8 +51,8 @@ jsp에서 request.getParameter("firstName"(fieldName)) 혹은, (shortcut) ${para
   request.getCookies()로 요청에 포함된 기존 쿠키를 읽음.     
   
   # jsp tags
-  - jsp custom tags% jsp standard tags library.   
-  
+  - jsp custom tags  jsp standard tags library.   
+  (정확히 jstl이란? -> 강의)     
   
   # servlets.   
   - jsp와 차이. jsp: 내부적으론 .jsp를 가진 html 형식파일(단, 중간에 동적인 자바코드로 페이지생성)      
@@ -70,4 +70,17 @@ jsp에서 request.getParameter("firstName"(fieldName)) 혹은, (shortcut) ${para
   
 - init params.   
   web.xml에서 각 suvlet별 param 지정 가능    
+  
+  # Model-View-Controller(MVC) with jsp, Servlet.       
+  controller(servlet), view(jsp), model(java class, db..)로 나누어 서버 요청 처리.    
+  - RequestDispatcher    
+  클라이언트로부터 요청을 받은 servlet이 로직 처리와 함꼐 (선택)추가적인 데이터를 request에 담아, view를 생성하는 jsp에 전달해 클라이언트로 페이지를 반환하도록 도와주는 클래스.      
+  request.setAttribute(name,value)로 데이터를 담고, RequestDispatcher dispatcher = request.getRequestDispatcher("jsp경로")로 반환할 jsp페이지(뷰)를 가져와서,      
+  dispatcher.forward(request,response)로 해당 jsp에 추가데이터를 담은 request와 response를 전달해 페이지를 생성하여 클라이언트에 반환.    
+ 
+  - MODEL. 
+  servlet에서 호출하는 데이터 처리 등을 담당하는 서버클래스. db등에 접근하거나, 로직 처리, 데이터 반환 등을 담당.    
+ 
+ 
+  
   
