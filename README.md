@@ -2,7 +2,7 @@
 웹서버상에서 동작하는 자바코드. jsp파일: html대신 사용하여, html내부에 java코드를 포함시켜 동적인 페이지 반환 가능.     
 
 # tomcat   
-자바 서버 프로그램. 서버 실행 후, localhost:8080 사용(의미?) --    
+자바 서버 프로그램. 서버 실행 후, localhost:8080 사용 
 
 #jsp     
 - scriptng 요소: expressions, Scriptlet, Declaration   
